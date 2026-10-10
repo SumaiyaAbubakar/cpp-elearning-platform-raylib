@@ -1,0 +1,7 @@
+raygui.h linguist -vendored
+raygui.h linguist-vendored =true
+raylib.h linguist-vendored=true
+.h linguist- language =C++
+raylib.h linguist -vendored =true
+fileHandlerdemo (1).cpp gui.cpp main (1).cpp tempCodeRunnerFile.cpp lingusit -language =C++ >> .gitattributes 
+echo *.cpp linguist -language =C++
