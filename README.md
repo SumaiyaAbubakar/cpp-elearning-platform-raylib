@@ -573,8 +573,8 @@ The running app and the class model were built side by side. Natural next steps:
 
 | Contributor | Focus |
 |---|---|
-| **Arfa Ashraf** | Class diagram, user hierarchy, login and registration screens |
-| **Maryam Amin** | Course hierarchy, quiz / assignment / grading classes, teacher dashboard |
+| **Arfa Ashraf https://github.com/arfa-ashraf** | Class diagram, user hierarchy, login and registration screens |
+| **Maryam Amin https://github.com/aminmaryam** | Course hierarchy, quiz / assignment / grading classes, teacher dashboard |
 | **Sumaiya Abubakar** | Student helpers, admin helpers, student and admin dashboards |
 
 <div align="center">
