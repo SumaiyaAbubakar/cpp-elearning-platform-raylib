@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560" role="img" aria-labelledby="t d">
+  <title id="t">SAM architecture</title>
+  <desc id="d">The running application: gui.cpp calls FileHandler, which reads and writes ten CSV files in data/. Separately, main (1).cpp contains a 24-class object-oriented domain model that is not yet connected to the GUI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14111f"/><stop offset="1" stop-color="#28243c"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a6ae0"/><stop offset="1" stop-color="#6a3fb0"/></linearGradient>
+    <linearGradient id="gt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fe0c4"/><stop offset="1" stop-color="#3fa883"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fd4ff"/><stop offset="1" stop-color="#2d8bd0"/></linearGradient>
+    <linearGradient id="gk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8fb4"/><stop offset="1" stop-color="#e0457f"/></linearGradient>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ffdc64"/></marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a82a8"/></marker>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="1280" height="560" rx="22" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1279" height="559" rx="22" fill="none" stroke="#fff" stroke-opacity="0.12"/>
+  <g font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+    <text x="40" y="52" font-size="13" font-weight="700" letter-spacing="5" fill="#78d2b4">SYSTEM ARCHITECTURE</text>
+    <text x="40" y="84" font-size="24" font-weight="700" fill="#f5f0ff">What runs today, and the model beside it</text>
+
+    <!-- LEFT: running application -->
+    <rect x="30" y="108" width="780" height="420" rx="18" fill="#ffffff" fill-opacity="0.03" stroke="#ffdc64" stroke-opacity="0.5" stroke-dasharray="2 0"/>
+    <text x="52" y="136" font-size="12" font-weight="700" letter-spacing="3" fill="#ffdc64">THE RUNNING APPLICATION</text>
+
+    <g filter="url(#sh)">
+      <rect x="56" y="156" width="330" height="330" rx="16" fill="url(#gp)"/>
+      <text x="76" y="190" font-size="20" font-weight="700" fill="#fff">GUI layer</text>
+      <text x="76" y="212" font-size="13" fill="#e9defc" font-family="'Courier New',monospace">gui.cpp · gui.h</text>
+      <g font-size="13" fill="#fff">
+        <rect x="76" y="232" width="290" height="40" rx="10" fill="#fff" fill-opacity="0.18"/><text x="90" y="257">enum Screen — 23 screen IDs</text>
+        <rect x="76" y="280" width="290" height="40" rx="10" fill="#fff" fill-opacity="0.18"/><text x="90" y="305">main() loop + switch(currentScreen)</text>
+        <rect x="76" y="328" width="290" height="40" rx="10" fill="#fff" fill-opacity="0.18"/><text x="90" y="353">DrawHome / DrawLogin / DrawQuiz …</text>
+        <rect x="76" y="376" width="290" height="40" rx="10" fill="#fff" fill-opacity="0.18"/><text x="90" y="401">DrawButton · DrawInputBox · DrawPanel</text>
+        <rect x="76" y="424" width="290" height="40" rx="10" fill="#fff" fill-opacity="0.18"/><text x="90" y="449">requireRole("Student"|"Teacher"|"Admin")</text>
+      </g>
+    </g>
+
+    <g filter="url(#sh)">
+      <rect x="456" y="156" width="330" height="200" rx="16" fill="url(#gt)"/>
+      <text x="476" y="190" font-size="20" font-weight="700" fill="#10332b">Persistence layer</text>
+      <text x="476" y="212" font-size="13" fill="#17493d" font-family="'Courier New',monospace">fileHandlerdemo.h / .cpp</text>
+      <g font-size="13" fill="#10332b">
+        <rect x="476" y="232" width="290" height="34" rx="10" fill="#fff" fill-opacity="0.4"/><text x="490" y="254">class FileHandler  (save* / load*)</text>
+        <rect x="476" y="272" width="290" height="34" rx="10" fill="#fff" fill-opacity="0.4"/><text x="490" y="294">9 record structs  (UserRecord …)</text>
+        <rect x="476" y="312" width="290" height="34" rx="10" fill="#fff" fill-opacity="0.4"/><text x="490" y="334">namespace CSV  (escape / parse)</text>
+      </g>
+    </g>
+
+    <g filter="url(#sh)">
+      <rect x="456" y="396" width="330" height="90" rx="16" fill="url(#gb)"/>
+      <text x="476" y="428" font-size="18" font-weight="700" fill="#0b2a44">data/  (CSV files)</text>
+      <text x="476" y="452" font-size="12" fill="#0b2a44" font-family="'Courier New',monospace">users · courses · enrollments · grades</text>
+      <text x="476" y="470" font-size="12" fill="#0b2a44" font-family="'Courier New',monospace">tasks · zoom · submissions · activity_log</text>
+    </g>
+
+    <!-- arrows with moving dots -->
+    <path id="a1" d="M386 256 H456" stroke="#ffdc64" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+    <text x="394" y="246" font-size="11" fill="#ffdc64">load/save</text>
+    <path id="a2" d="M621 356 V396" stroke="#ffdc64" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+    <circle r="4" fill="#ffdc64"><animateMotion dur="2.2s" repeatCount="indefinite" path="M386 256 H456"/></circle>
+    <circle r="4" fill="#ffdc64"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M621 356 V396"/></circle>
+
+    <!-- RIGHT: domain model -->
+    <rect x="850" y="108" width="400" height="420" rx="18" fill="#ffffff" fill-opacity="0.03" stroke="#ff6496" stroke-opacity="0.6" stroke-dasharray="7 6"/>
+    <text x="872" y="136" font-size="12" font-weight="700" letter-spacing="3" fill="#ff8fb4">THE OOP DOMAIN MODEL</text>
+    <g filter="url(#sh)">
+      <rect x="876" y="156" width="348" height="330" rx="16" fill="url(#gk)"/>
+      <text x="896" y="190" font-size="20" font-weight="700" fill="#fff">24 classes</text>
+      <text x="896" y="212" font-size="13" fill="#ffe3ee" font-family="'Courier New',monospace">main (1).cpp</text>
+      <g font-size="13" fill="#fff">
+        <rect x="896" y="232" width="308" height="40" rx="10" fill="#fff" fill-opacity="0.2"/><text x="910" y="257">User ▸ Student · Teacher · Admin</text>
+        <rect x="896" y="280" width="308" height="40" rx="10" fill="#fff" fill-opacity="0.2"/><text x="910" y="305">Course ▸ FreeCourse · PaidCourse</text>
+        <rect x="896" y="328" width="308" height="40" rx="10" fill="#fff" fill-opacity="0.2"/><text x="910" y="353">Quiz · Question · Assignment · GradeBook</text>
+        <rect x="896" y="376" width="308" height="40" rx="10" fill="#fff" fill-opacity="0.2"/><text x="910" y="401">IApprovable ▸ RegistrationApproval</text>
+        <rect x="896" y="424" width="308" height="40" rx="10" fill="#fff" fill-opacity="0.2"/><text x="910" y="449">CourseManager · AccountManager · …</text>
+      </g>
+    </g>
+
+
+    <text x="40" y="548" font-size="12" fill="#8a82a8">Today the GUI hands plain record structs to FileHandler. The 24-class model lives in its own file and is not yet connected to the GUI.</text>
+  </g>
+</svg>
